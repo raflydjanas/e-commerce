@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  @apply border border-slate-600 text-slate-50 hover:border-purple-500 rounded-xl transition-all duration-300;
+}
+
+.link {
+  @apply border border-slate-600 hover:border-purple-700 px-3 py-2 rounded-xl;
+}
