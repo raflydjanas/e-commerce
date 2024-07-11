@@ -7,5 +7,5 @@
 }
 
 .link {
-  @apply border border-slate-600 hover:border-purple-700 px-3 py-2 rounded-xl;
+  @apply border border-slate-600 hover:border-violet-700 px-3 py-2 rounded-xl;
 }
