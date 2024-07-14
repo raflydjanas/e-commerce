@@ -24,7 +24,7 @@ const Navbar = () => {
           <p>Login</p>
           <HiLogin size={20} />
         </Link>
-        <Link href={"https://github.com"} className="border border-slate-600 hover:border-violet-600 px-5 py-3 rounded-xl">
+        <Link href={"https://github.com/raflydjanas/e-commerce"} className="border border-slate-600 hover:border-violet-600 px-5 py-3 rounded-xl">
           <FaGithub />
         </Link>
       </div>

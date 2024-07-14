@@ -9,3 +9,13 @@
 .link {
   @apply border border-slate-600 hover:border-violet-700 px-3 py-2 rounded-xl;
 }
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
