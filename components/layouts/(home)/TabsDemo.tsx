@@ -2,58 +2,19 @@
 
 import { Tabs } from "@/components/ui/aceternity/Tabs";
 import Image from "next/image";
+import ServicesTabs from "./ServicesTabs";
 
 export function TabsDemo() {
   const tabs = [
     {
       title: "Product",
       value: "product",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Product Tab</p>
-          <DummyContent />
-        </div>
-      ),
+      content: <DummyContent />,
     },
     {
       title: "Services",
       value: "services",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Services tab</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-    {
-      title: "Playground",
-      value: "playground",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Playground tab</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-    {
-      title: "Content",
-      value: "content",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Content tab</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-    {
-      title: "Random",
-      value: "random",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Random tab</p>
-          <DummyContent />
-        </div>
-      ),
+      content: <ServicesTabs />,
     },
   ];
 
@@ -66,6 +27,16 @@ export function TabsDemo() {
 
 const DummyContent = () => {
   return (
-    <Image src="/linear.webp" alt="dummy image" width="1000" height="1000" className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto" />
+    <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-slate-900 to-violet-950 ">
+      <h3 className="text-3xl mb-4">Product Tabs</h3>
+      <div className="flex justify-between items-center h-full w-full">
+        <p className="text-center hidden md:block text-slate-300 mx-3 text-base max-w-xl">
+          Enjoy the best online shopping experience with a wide range of products, exciting offers, fast delivery, secure payment methods, and 24/7 customer service. Join our loyalty program and
+          experience the convenience of shopping at a trusted e-commerce platform!
+        </p>
+
+        <Image src="/images/product.svg" alt="dummy image" width={500} height={500} />
+      </div>
+    </div>
   );
 };
