@@ -1,4 +1,4 @@
-import { TabsDemo } from "./TabsDemo";
+import { TabsInvormations } from "./TabsInvormations";
 
 const MainHome = () => {
   return (
@@ -7,7 +7,7 @@ const MainHome = () => {
       <p className="text-center text-slate-300 mx-3 xl:mx-0 text-sm md:text-base xl:text-lg max-w-2xl">
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.
       </p>
-      <TabsDemo />
+      <TabsInvormations />
     </section>
   );
 };

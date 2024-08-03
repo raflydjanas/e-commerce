@@ -1,11 +1,10 @@
 "use client";
 
 import { Tabs } from "@/components/ui/aceternity/Tabs";
-import Image from "next/image";
 import ServicesTabs from "./ServicesTabs";
 import CategoriesProductTabs from "./CategoriesTabs";
 
-export function TabsDemo() {
+export function TabsInvormations() {
   const tabs = [
     {
       title: "Product",
