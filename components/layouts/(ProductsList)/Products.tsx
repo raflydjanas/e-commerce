@@ -1,10 +1,12 @@
 import { getAllProducts } from "@/app/api/product";
-import { Input } from "@/components/ui/input";
+import Search from "@/components/ui/Search";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import AllProducts from "./AllProducts";
+import HandleProductsListNav from "./HandleProductsListNav";
 
 const Products = () => {
-  const [products, setProducts] = useState<any>([]);
+  const [products, setProducts] = useState<[]>([]);
 
   const getProducts = async () => {
     const data = await getAllProducts();
@@ -16,26 +18,15 @@ const Products = () => {
   }, []);
 
   return (
-    <section className="">
-      <Input className="bg-slate-800 border-slate-500 text-white text-lg" />
-      <div className="flex">
-        <div className="text-white flex flex-wrap items-center justify-center gap-3">
-          {products.map((product: any) => (
-            <div key={product.id} className="border border-slate-700 flex flex-col items-center justify-center">
-              <Image src={product.images[1]} alt={product.title} width={200} height={200} className="w-full object-cover object-center" />
-              <div className="">
-                <p className="text-lg">{product.title.slice(0, 20)}...</p>
-                <p>{product.description.slice(0, 30)}...</p>
-                <p className="font-bold text-xl">${product.price}</p>
-              </div>
-            </div>
-          ))}
+    <section className="w-full h-full border border-slate-700">
+      <Search />
+      <div className="flex gap-3">
+        <div className="text-white flex flex-wrap items-center justify-center gap-3 w-[85%]">
+          {products.map((product: any) => {
+            return <AllProducts product={product} key={product.id} />;
+          })}
         </div>
-        <div className="border border-slate-700 w-full max-h-[30rem] text-white">
-          <p>This is Product Page</p>
-          <p>This is Product Page</p>
-          <p>This is Product Page</p>
-        </div>
+        <HandleProductsListNav />
       </div>
     </section>
   );

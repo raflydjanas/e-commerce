@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-slate-900`}>
         {!disabledNavbar.includes(pathname) && <Navbar />}
-        <main className="h-screen w-full ">{children}</main>
+        <main className="h-screen w-full">{children}</main>
       </body>
     </html>
   );

@@ -9,7 +9,6 @@ export const getAllCategoriesProducts = async () => {
 
 export const getAllProducts = async () => {
   const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products`);
-  console.log(res);
   const data = await res?.data;
   console.log("🚀 ~ getAllProducts ~ data:", data);
 
