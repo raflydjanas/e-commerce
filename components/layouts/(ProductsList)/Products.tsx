@@ -18,7 +18,7 @@ const Products = () => {
   }, []);
 
   return (
-    <section className="w-full h-full border border-slate-700">
+    <section className="w-full h-full ">
       <Search />
       <div className="flex gap-3">
         <div className="text-white flex flex-wrap items-center justify-center gap-3 w-[85%]">
