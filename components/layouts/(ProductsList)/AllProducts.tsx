@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const AllProducts = ({ product }: { product: any }) => {
-  if (product.images.length === 0 || !product.images[1] || product.images[1] === "" || !product.images[0]) {
+  if (product.images.length === 0 || !product.images[1]) {
     return null;
   }
 

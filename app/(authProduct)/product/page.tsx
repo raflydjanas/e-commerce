@@ -1,5 +1,3 @@
-"use client";
-
 import Products from "@/components/layouts/(ProductsList)/Products";
 
 const ProductPage = () => {

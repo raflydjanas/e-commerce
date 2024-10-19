@@ -3,7 +3,6 @@ import { Input } from "./input";
 
 const Search = () => {
   const [search, setSearch] = useState<string>("");
-  console.log("🚀 ~ Products ~ setSearch:", search);
 
   return (
     <form>

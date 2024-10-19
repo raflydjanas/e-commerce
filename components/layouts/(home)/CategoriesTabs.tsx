@@ -1,4 +1,4 @@
-import { getAllCategoriesProducts } from "@/app/api/product";
+import { getCategoriesProducts } from "@/app/api/product";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -12,7 +12,7 @@ const CategoriesProductTabs = () => {
   const [category, setCategory] = useState<CategoriesProductTabsProps[]>([]);
 
   const categories: () => Promise<void> = async () => {
-    const dataCategories: CategoriesProductTabsProps[] = await getAllCategoriesProducts();
+    const dataCategories: CategoriesProductTabsProps[] = await getCategoriesProducts();
     setCategory(dataCategories);
   };
 
